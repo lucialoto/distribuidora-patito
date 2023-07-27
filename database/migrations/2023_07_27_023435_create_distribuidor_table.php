@@ -19,7 +19,7 @@ class CreateDistribuidorTable extends Migration
             $table->char('login',255);
             /* $table->char('email',255);
             $table->char('password',255); */
-            $table->unsignedBigInteger('user');
+            $table->unsignedBigInteger('user')->nullable();
             $table->timestamps();
 
             $table->foreign('user')->references('id')->on('user');

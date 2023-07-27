@@ -23,7 +23,7 @@ class CreateTareaTable extends Migration
             $table->decimal('longitud',19,0);
             $table->integer('mercancia');
             $table->char('estado',255);
-            $table->unsignedBigInteger('distribuidor');
+            $table->unsignedBigInteger('distribuidor')->nullable();
             $table->timestamps();
 
             $table->foreign('distribuidor')->references('id')->on('distribuidor');
